@@ -6,13 +6,13 @@ namespace App\Model;
 use Illuminate\Database\Eloquent\Model;
 
 class User extends Model{
-    protected $table = 'tblaccounts';
+    protected $table = 'tblusers';
     // column sa table
     protected $fillable = [
-        'username', 'password'
+        'username', 'email', 'password', 'userType',
     ];
     public $timestamps = false;
-    protected $primaryKey = 'id';//add to not explicitly ask for an id when adding data
+    protected $primaryKey = 'userId';//add to not explicitly ask for an id when adding data
 }
 
 ?>
